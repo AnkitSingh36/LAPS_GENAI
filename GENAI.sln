@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76DED2AA-1895-4CD5-B919-A7C5C9753B07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInAutomation.Core", "src\LinkedInAutomation.Core\LinkedInAutomation.Core.csproj", "{1BF5B678-87B7-4007-B101-8A0100FFDFC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInAutomation.Functions", "src\LinkedInAutomation.Functions\LinkedInAutomation.Functions.csproj", "{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInAutomation.Api", "src\LinkedInAutomation.Api\LinkedInAutomation.Api.csproj", "{CAF7F04A-1C99-4483-B119-0778E443E574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BF5B678-87B7-4007-B101-8A0100FFDFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF5B678-87B7-4007-B101-8A0100FFDFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF5B678-87B7-4007-B101-8A0100FFDFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF5B678-87B7-4007-B101-8A0100FFDFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF7F04A-1C99-4483-B119-0778E443E574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF7F04A-1C99-4483-B119-0778E443E574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF7F04A-1C99-4483-B119-0778E443E574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF7F04A-1C99-4483-B119-0778E443E574}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BF5B678-87B7-4007-B101-8A0100FFDFC2} = {76DED2AA-1895-4CD5-B919-A7C5C9753B07}
+		{94E09C0B-FB53-48BB-AD7E-AEE980867B6E} = {76DED2AA-1895-4CD5-B919-A7C5C9753B07}
+		{CAF7F04A-1C99-4483-B119-0778E443E574} = {76DED2AA-1895-4CD5-B919-A7C5C9753B07}
+	EndGlobalSection
+EndGlobal

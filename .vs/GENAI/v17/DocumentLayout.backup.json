@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GENAI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|d:\\genai\\src\\linkedinautomation.functions\\linkedinautomation.functions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|solutionrelative:src\\linkedinautomation.functions\\linkedinautomation.functions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LinkedInAutomation.Functions",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
+              "RelativeToolTip": "src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-12T18:43:46.238Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
