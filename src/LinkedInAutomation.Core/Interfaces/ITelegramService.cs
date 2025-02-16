@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Services
 {
-    internal interface ILinkedinService
+    internal interface ITelegramService
     {
     }
 }

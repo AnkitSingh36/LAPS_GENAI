@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedInAutomation.Core.Services
+namespace LinkedInAutomation.Core.Models
 {
-    internal interface ILinkedinService
+    internal class TelegramResponse
     {
     }
 }

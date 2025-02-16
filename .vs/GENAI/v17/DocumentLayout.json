@@ -3,52 +3,36 @@
   "WorkspaceRootPath": "D:\\GENAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAF7F04A-1C99-4483-B119-0778E443E574}|src\\LinkedInAutomation.Api\\LinkedInAutomation.Api.csproj|d:\\genai\\src\\linkedinautomation.api\\controllers\\webhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAF7F04A-1C99-4483-B119-0778E443E574}|src\\LinkedInAutomation.Api\\LinkedInAutomation.Api.csproj|solutionrelative:src\\linkedinautomation.api\\controllers\\webhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\telegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\telegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|d:\\genai\\src\\linkedinautomation.functions\\postingfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|solutionrelative:src\\linkedinautomation.functions\\postingfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\linkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\linkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\whatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\whatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\geminicontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\geminicontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\huggingfacegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\huggingfacegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\ilinkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\ilinkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\iwhatsappresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\iwhatsappresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\iaicontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\iaicontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\icontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\icontentgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\itelegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\itelegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\models\\linkedincredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\models\\linkedincredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\models\\aigeneratedpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\models\\aigeneratedpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\models\\whatsappresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\models\\whatsappresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\models\\telegramresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\models\\telegramresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\models\\postcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\models\\postcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\linkedinautomation.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\linkedinautomation.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{74089FDB-77A4-4E62-B207-1DA75A17B521}|src\\LinkedInAutomation.Console\\LinkedInAutomation.Console.csproj|d:\\genai\\src\\linkedinautomation.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74089FDB-77A4-4E62-B207-1DA75A17B521}|src\\LinkedInAutomation.Console\\LinkedInAutomation.Console.csproj|solutionrelative:src\\linkedinautomation.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,162 +47,110 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WebhookController.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Api\\Controllers\\WebhookController.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Api\\Controllers\\WebhookController.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Api\\Controllers\\WebhookController.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Api\\Controllers\\WebhookController.cs",
+              "Title": "TelegramService.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\TelegramService.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\TelegramService.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\TelegramService.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\TelegramService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:53:20.215Z",
+              "WhenOpened": "2025-02-16T10:15:47.872Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PostingFunction.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\PostingFunction.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Functions\\PostingFunction.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\PostingFunction.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Functions\\PostingFunction.cs",
+              "Title": "HuggingFaceGenerator.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:52:20.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LinkedInService.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:52:03.771Z",
+              "WhenOpened": "2025-02-16T10:15:19.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WhatsAppService.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\WhatsAppService.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\WhatsAppService.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\WhatsAppService.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\WhatsAppService.cs",
+              "Title": "IAIContentGenerator.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IAIContentGenerator.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\IAIContentGenerator.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IAIContentGenerator.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\IAIContentGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:51:43.445Z",
+              "WhenOpened": "2025-02-16T10:13:13.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GeminiContentGenerator.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\GeminiContentGenerator.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\GeminiContentGenerator.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\GeminiContentGenerator.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\GeminiContentGenerator.cs",
+              "Title": "ITelegramService.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ITelegramService.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\ITelegramService.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ITelegramService.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\ITelegramService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:51:29.084Z",
+              "WhenOpened": "2025-02-16T10:12:07.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ILinkedinService.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:11:53.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ILinkedInService.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedInService.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedInService.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedInService.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedInService.cs",
+              "Title": "AIGeneratedPost.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\AIGeneratedPost.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Models\\AIGeneratedPost.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\AIGeneratedPost.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Models\\AIGeneratedPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:50:19.443Z",
+              "WhenOpened": "2025-02-16T10:11:08.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IWhatsAppResponse.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IWhatsAppResponse.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\IWhatsAppResponse.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IWhatsAppResponse.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\IWhatsAppResponse.cs",
+              "Title": "TelegramResponse.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\TelegramResponse.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Models\\TelegramResponse.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\TelegramResponse.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Models\\TelegramResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:50:01.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IContentGenerator.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IContentGenerator.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\IContentGenerator.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\IContentGenerator.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\IContentGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:49:47.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LinkedInCredentials.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\LinkedInCredentials.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Models\\LinkedInCredentials.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\LinkedInCredentials.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Models\\LinkedInCredentials.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:49:22.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WhatsAppResponse.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\WhatsAppResponse.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Models\\WhatsAppResponse.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\WhatsAppResponse.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Models\\WhatsAppResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:49:09.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PostContent.cs",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\PostContent.cs",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Models\\PostContent.cs",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Models\\PostContent.cs",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Models\\PostContent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:48:53.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LinkedInAutomation.Core",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj",
-              "RelativeToolTip": "src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-12T18:45:26.967Z",
+              "WhenOpened": "2025-02-16T10:10:30.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Console\\Program.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Console\\Program.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Console\\Program.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Console\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:05:29.633Z",
+              "EditorCaption": ""
             }
           ]
         }

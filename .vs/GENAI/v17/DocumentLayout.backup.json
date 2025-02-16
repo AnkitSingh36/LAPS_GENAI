@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\GENAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|d:\\genai\\src\\linkedinautomation.functions\\linkedinautomation.functions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{94E09C0B-FB53-48BB-AD7E-AEE980867B6E}|src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj|solutionrelative:src\\linkedinautomation.functions\\linkedinautomation.functions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{74089FDB-77A4-4E62-B207-1DA75A17B521}|src\\LinkedInAutomation.Console\\LinkedInAutomation.Console.csproj|d:\\genai\\src\\linkedinautomation.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74089FDB-77A4-4E62-B207-1DA75A17B521}|src\\LinkedInAutomation.Console\\LinkedInAutomation.Console.csproj|solutionrelative:src\\linkedinautomation.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LinkedInAutomation.Functions",
-              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
-              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
-              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
-              "RelativeToolTip": "src\\LinkedInAutomation.Functions\\LinkedInAutomation.Functions.csproj",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Console\\Program.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Console\\Program.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Console\\Program.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Console\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-12T18:43:46.238Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:05:29.633Z",
               "EditorCaption": ""
             }
           ]
