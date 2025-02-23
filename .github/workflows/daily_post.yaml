@@ -43,3 +43,10 @@ jobs:
         DOTNET_ENVIRONMENT: Production
       continue-on-error: false
 
+    - name: Send Telegram Alert on Failure
+      if: failure()
+      run: |
+        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+        -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+        -d text="⚠️ LinkedIn automation failed! Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
