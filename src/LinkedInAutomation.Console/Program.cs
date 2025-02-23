@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using LinkedInAutomation.Core.Services;
 using Microsoft.Extensions.Logging;
-using System;
+using System.Net.Http;
 
 namespace LinkedInAutomation.Console
 {
@@ -64,18 +64,18 @@ namespace LinkedInAutomation.Console
                     logger
                 );
             });
+            services.AddHttpClient<ILinkedInService, LinkedInService>();
 
-            services.AddSingleton<ILinkedInService>(provider =>
-            {
-                var logger = provider.GetRequiredService<ILogger<LinkedInService>>();
-
-                return new LinkedInService(
-                    Environment.GetEnvironmentVariable("LINKEDIN_CLIENT_ID") ?? throw new InvalidOperationException("LinkedIn Client ID not found."),
-                    Environment.GetEnvironmentVariable("LINKEDIN_CLIENT_SECRET") ?? throw new InvalidOperationException("LinkedIn Client Secret not found."),
-                    Environment.GetEnvironmentVariable("LINKEDIN_ACCESS_TOKEN") ?? throw new InvalidOperationException("LinkedIn Access Token not found."),
-                    logger
-                );
-            });
+            services.AddTransient<ILinkedInService>(provider =>
+               {
+                   var logger = provider.GetRequiredService<ILogger<LinkedInService>>();
+                   return new LinkedInService(
+                       new HttpClient(),
+                       Environment.GetEnvironmentVariable("LINKEDIN_CLIENT_ID") ?? throw new InvalidOperationException("LinkedIn Client ID not found."),
+                       Environment.GetEnvironmentVariable("LINKEDIN_CLIENT_SECRET") ?? throw new InvalidOperationException("LinkedIn Client Secret not found."),
+                       logger
+                   );
+               });
 
             return services.BuildServiceProvider();
         }

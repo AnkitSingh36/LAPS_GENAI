@@ -70,6 +70,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [

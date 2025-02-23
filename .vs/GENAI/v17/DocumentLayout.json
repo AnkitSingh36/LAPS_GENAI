@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\linkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\linkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\interfaces\\ilinkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\interfaces\\ilinkedinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|d:\\genai\\src\\linkedinautomation.core\\services\\huggingfacegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF5B678-87B7-4007-B101-8A0100FFDFC2}|src\\LinkedInAutomation.Core\\LinkedInAutomation.Core.csproj|solutionrelative:src\\linkedinautomation.core\\services\\huggingfacegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,10 +36,36 @@
               "RelativeDocumentMoniker": "src\\LinkedInAutomation.Console\\Program.cs",
               "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Console\\Program.cs",
               "RelativeToolTip": "src\\LinkedInAutomation.Console\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA4wB0AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T10:05:29.633Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ILinkedinService.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Interfaces\\ILinkedinService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T19:48:13.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HuggingFaceGenerator.cs",
+              "DocumentMoniker": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\HuggingFaceGenerator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T18:29:28.974Z",
               "EditorCaption": ""
             },
             {
@@ -42,9 +76,9 @@
               "RelativeDocumentMoniker": "src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
               "ToolTip": "D:\\GENAI\\src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
               "RelativeToolTip": "src\\LinkedInAutomation.Core\\Services\\LinkedInService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T07:54:39.557Z",
+              "WhenOpened": "2025-02-22T19:24:12.589Z",
               "EditorCaption": ""
             },
             {
