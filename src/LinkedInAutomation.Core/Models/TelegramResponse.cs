@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Models
 {
-    internal class TelegramResponse
+    public class TelegramResponse
     {
+        public long MessageId { get; set; }
+        public string? ResponseText { get; set; }
+        public bool IsApproved { get; set; }
+        public DateTime ReceivedAt { get; set; }
+        public long ChatId { get; set; }
+        public string? Username { get; set; }
+
     }
 }

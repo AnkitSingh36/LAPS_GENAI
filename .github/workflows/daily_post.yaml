@@ -1,0 +1,46 @@
+name: Daily LinkedIn Post
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Runs daily at 9 AM UTC
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  generate-and-post:
+    runs-on: ubuntu-latest
+    
+    env:
+      HUGGINGFACE_API_TOKEN: ${{ secrets.HUGGINGFACE_API_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+      LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+      LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+
+    steps:
+    - name: 🔹 Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: 🔹 Setup .NET 8.0
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: 🔹 Restore Dependencies
+      run: dotnet restore
+      continue-on-error: false
+
+    - name: 🔹 Build Project
+      run: dotnet build --configuration Release --no-restore
+      continue-on-error: false
+
+    - name: 🔹 Run Unit Tests
+      run: dotnet test --configuration Release --no-build --verbosity normal
+      continue-on-error: false
+
+    - name: 🔹 Run LinkedIn Automation
+      run: dotnet run --project src/LinkedInAutomation.Console/LinkedInAutomation.Console.csproj
+      env:
+        DOTNET_ENVIRONMENT: Production
+      continue-on-error: false
+

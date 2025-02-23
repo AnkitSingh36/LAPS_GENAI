@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Models
 {
-    internal class PostContent
+    public class PostContent
     {
+        public string Topic { get; set; }
+        public string Content { get; set; }
+        public DateTime GeneratedAt { get; set; }
+
+        public bool IsApproved { get; set; }
     }
 }

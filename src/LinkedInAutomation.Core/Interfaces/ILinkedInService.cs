@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Services
 {
-    internal interface ILinkedinService
+    public interface ILinkedInService
     {
+        Task Initialize();
+        Task<bool> PostContent(string content);
+        Task<bool> IsAuthenticated();
+        Task<string> GetUserProfile();
+        Task<bool> AddHashtags(string[] hashtags);
+        Task<string> PreviewPost(string content);
+        Task<bool> SchedulePost(string content, DateTime scheduledGTime);
+
     }
 }

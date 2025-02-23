@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Services
 {
-    internal interface IAIContentGenerator
+    public interface IAIContentGenerator
     {
+        Task<string> GenerateContentAsync(string topic);
     }
 }
