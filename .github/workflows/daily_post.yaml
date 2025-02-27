@@ -29,6 +29,9 @@ jobs:
       run: dotnet restore
       continue-on-error: false
 
+    - name: Fix Selenium Manager Permissions
+      run: chmod +x src/LinkedInAutomation.Console/bin/Debug/net8.0/selenium-manager/linux/selenium-manager || echo "No selenium-manager found, skipping"
+
     - name: Build Project
       run: dotnet build --configuration Release --no-restore
       continue-on-error: false
