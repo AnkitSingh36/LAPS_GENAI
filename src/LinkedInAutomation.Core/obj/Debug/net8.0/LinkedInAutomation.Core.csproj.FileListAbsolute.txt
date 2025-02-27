@@ -1,0 +1,16 @@
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\LinkedInAutomation.Core.deps.json
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\LinkedInAutomation.Core.dll
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\LinkedInAutomation.Core.pdb
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.csproj.AssemblyReference.cache
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.AssemblyInfoInputs.cache
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.AssemblyInfo.cs
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.csproj.CoreCompileInputs.cache
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.sourcelink.json
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.dll
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\refint\LinkedInAutomation.Core.dll
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\LinkedInAutomation.Core.pdb
+D:\GENAI\src\LinkedInAutomation.Core\obj\Debug\net8.0\ref\LinkedInAutomation.Core.dll
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\GENAI\src\LinkedInAutomation.Core\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe

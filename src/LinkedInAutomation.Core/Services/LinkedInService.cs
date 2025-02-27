@@ -1,151 +1,129 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text.Json;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using Microsoft.Extensions.Logging;
-using LinkedInAutomation.Core.Models;
+using System.ComponentModel.DataAnnotations;
+using SeleniumExtras.WaitHelpers;
 
 namespace LinkedInAutomation.Core.Services
 {
-    public class LinkedInService : ILinkedInService
+    public class LinkedInService : ILinkedinService
     {
-        private readonly string _clientId;
-        private readonly string _clientSecret;
-        private string? _accessToken;
-        private readonly HttpClient _httpClient;
         private readonly ILogger<LinkedInService> _logger;
-        private string? _userUrn;
+        private readonly string _email;
+        private readonly string _password;
 
-        public LinkedInService(HttpClient httpClient, string clientId, string clientSecret, ILogger<LinkedInService> logger)
+        public LinkedInService(ILogger<LinkedInService> logger, string emailId, string secretKey)
         {
-            _clientId = clientId;
-            _clientSecret = clientSecret;
             _logger = logger;
-            _httpClient = httpClient;
-
-            // Set base URL and Authorization header
-            _httpClient.BaseAddress = new Uri("https://api.linkedin.com/v2/");
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
+            _email = emailId;
+            _password = secretKey;
         }
 
-        public async Task Initialize()
+        public async Task<bool> PostContentAsync(string content)
         {
-            try
-            {
-                _logger.LogInformation("Fetching LinkedIn profile data...");
-                var profileResponse = await _httpClient.GetAsync("me");
-                profileResponse.EnsureSuccessStatusCode();
+            _logger.LogInformation("🚀 Starting LinkedIn post automation...");
 
-                var profile = await profileResponse.Content.ReadFromJsonAsync<LinkedInProfile>();
-                _userUrn = profile?.Id;
+            var options = new ChromeOptions();
+            //options.AddArgument("--headless"); // Runs in headless mode (no UI)
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
 
-                _logger.LogInformation($"Successfully initialized LinkedInService for user: {_userUrn}");
-            }
-            catch (Exception ex)
+            using (IWebDriver driver = new ChromeDriver(options))
             {
-                _logger.LogError(ex, "Failed to initialize LinkedInService.");
-                throw;
-            }
-        }
-
-        public async Task<bool> PostContent(string content)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(_userUrn))
+                try
                 {
-                    throw new Exception("User URN is not initialized.");
-                }
+                    driver.Navigate().GoToUrl("https://www.linkedin.com/login");
+                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
-                var payload = new
-                {
-                    author = $"urn:li:person:{_userUrn}",
-                    lifecycleState = "PUBLISHED",
-                    specificContent = new
+                    wait.Until(d => d.FindElement(By.Id("username"))).SendKeys(_email);
+
+                    driver.FindElement(By.Id("password")).SendKeys(_password);
+                    driver.FindElement(By.Id("password")).SendKeys(Keys.Return);
+
+                    _logger.LogInformation("Logged into LinkedIn successfully.");
+                    await Task.Delay(5000); 
+
+                    driver.Navigate().GoToUrl("https://www.linkedin.com/feed/");
+                    await Task.Delay(3000);
+
+                    wait.Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
+
+                    _logger.LogInformation("Clicking on start post button");
+
+
+                    try
                     {
-                        com_linkedin_ugc_shareContent = new
+                        // Ensure any modal/pop-up is closed
+                        try
                         {
-                            shareCommentary = new { text = content },
-                            shareMediaCategory = "NONE"
+                            var closeButton = driver.FindElement(By.XPath("//button[@aria-label='Dismiss']"));
+                            if (closeButton.Displayed)
+                            {
+                                closeButton.Click();
+                                Thread.Sleep(1000);
+                            }
                         }
-                    },
-                    visibility = new
-                    {
-                        com_linkedin_ugc_MemberNetworkVisibility = "PUBLIC"
+                        catch (NoSuchElementException)
+                        {
+                            Console.WriteLine("No pop-up detected.");
+                        }
+
+                        // Wait for "Start a post" button to be visible
+                        IWebElement startPostButton = wait.Until(d =>
+                        {
+                            var btn = d.FindElement(By.XPath("//div[contains(@class, 'share-box-feed-entry__top-bar')]//button[contains(@class, 'artdeco-button')]//span[contains(@class, 'truncate')]//span[contains(@class, 't-normal')]//strong[text()='Start a post']"));
+                            ((IJavaScriptExecutor)d).ExecuteScript("arguments[0].scrollIntoView(true);", btn);
+                            return (btn.Displayed && btn.Enabled) ? btn : null;
+                        });
+
+
+
+                        // Scroll into view before clicking
+                        ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", startPostButton);
+                        Thread.Sleep(500);
+
+                        // Click "Start a Post"
+                        startPostButton.Click();
+                        Console.WriteLine("Clicked on 'Start a post' button successfully!");
+
                     }
-                };
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                   
 
-                var response = await _httpClient.PostAsJsonAsync("ugcPosts", payload);
+                    await Task.Delay(2000);
 
-                if (!response.IsSuccessStatusCode)
+                    _logger.LogInformation("Entering post content");
+
+                    // Enter post content
+                    var postBox = wait.Until(d => d.FindElement(By.XPath("//div[@role='textbox']")));
+                    postBox.SendKeys(content);
+                    await Task.Delay(2000);
+
+                    // Click "Post"
+                    IWebElement postButton = wait.Until(ExpectedConditions.ElementToBeClickable(
+        By.XPath("//button[contains(@class, 'share-actions__primary-action') and contains(@class, 'artdeco-button--primary')]")
+    ));
+                    postButton.Click();
+                    _logger.LogInformation("Successfully posted on LinkedIn!");
+
+                    return true;
+                }
+                catch (Exception ex)
                 {
-                    _logger.LogError($"Failed to post content. Status: {response.StatusCode}");
+                    _logger.LogError(ex, "Failed to post content on LinkedIn.");
                     return false;
                 }
-
-                _logger.LogInformation("Content posted successfully on LinkedIn.");
-                return true;
+                finally
+                {
+                    driver.Quit(); 
+                }
             }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Failed to post content.");
-                return false;
-            }
-        }
-
-        public async Task<bool> IsAuthenticated()
-        {
-            try
-            {
-                var response = await _httpClient.GetAsync("me");
-                return response.IsSuccessStatusCode;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Authentication check failed.");
-                return false;
-            }
-        }
-
-        public async Task<string> GetUserProfile()
-        {
-            try
-            {
-                var response = await _httpClient.GetAsync("me");
-                response.EnsureSuccessStatusCode();
-
-                var profile = await response.Content.ReadFromJsonAsync<LinkedInProfile>();
-                return $"{profile?.LocalizedFirstName} {profile?.LocalizedLastName}";
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Failed to fetch user profile.");
-                throw;
-            }
-        }
-
-        public async Task<bool> AddHashtags(string[] hashtags)
-        {
-            if (hashtags.Length == 0) return true;
-
-            var hashtagString = string.Join(" ", hashtags.Select(h => $"#{h}"));
-            return await PostContent(hashtagString);
-        }
-
-        public Task<string> PreviewPost(string content)
-        {
-            return Task.FromResult(content);
-        }
-
-        public async Task<bool> SchedulePost(string content, DateTime scheduledTime)
-        {
-            if (scheduledTime <= DateTime.UtcNow)
-                return await PostContent(content);
-
-            throw new NotImplementedException("LinkedIn API does not support post scheduling.");
         }
     }
 }

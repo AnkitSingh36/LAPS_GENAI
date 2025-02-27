@@ -8,8 +8,8 @@ namespace LinkedInAutomation.Core.Models
 {
     public class PostContent
     {
-        public string Topic { get; set; }
-        public string Content { get; set; }
+        public required string Topic { get; set; }
+        public required string Content { get; set; }
         public DateTime GeneratedAt { get; set; }
 
         public bool IsApproved { get; set; }

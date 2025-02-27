@@ -31,7 +31,7 @@ namespace LinkedInAutomation.Core.Services
             _logger = logger;
             _pendingResponses = new Dictionary<long, TaskCompletionSource<TelegramResponse>>();
 
-            // Set up message handling
+            
             _botClient.StartReceiving(
                 HandleUpdateAsync,
                 HandleErrorAsync
@@ -144,7 +144,7 @@ namespace LinkedInAutomation.Core.Services
                 }
                 else if (update.CallbackQuery != null)
                 {
-                    var chatId = update.CallbackQuery.Message.Chat.Id;
+                    var chatId = update.CallbackQuery.Message!.Chat.Id;
                     if (_pendingResponses.TryGetValue(chatId, out var tcs))
                     {
                         var response = new TelegramResponse

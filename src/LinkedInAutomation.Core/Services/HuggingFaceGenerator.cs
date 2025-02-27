@@ -1,45 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
+using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace LinkedInAutomation.Core.Services
 {
     public class HuggingFaceGenerator : IAIContentGenerator
     {
-        private readonly HttpClient _client;
+        private readonly HttpClient _httpClient;
         private readonly string _apiToken;
-        private const string API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1";
+        private const string API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct";
 
-        public HuggingFaceGenerator(string apiToken)
+        public HuggingFaceGenerator(HttpClient httpClient, string apiToken)
         {
             _apiToken = apiToken;
-            _client = new HttpClient();
-            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiToken}");
-
+            _httpClient = httpClient;
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiToken}");
         }
 
         public async Task<string> GenerateContentAsync(string topic)
         {
-            var prompt = $@"Create a professional LinkedIn Post about {topic}.
-                            The Post should be engaging, informative, and include relevant hashtag.
-                            Keep it under 3000 charachter.";
+            var prompt = $@"Write a professional, engaging LinkedIn post about **{topic}**, with a strong hook, key insights, bullet points, emojis, hashtags, and a CTA—under 3000 characters.";
 
-            var payload = new { input = prompt };
-            var response = await _client.PostAsJsonAsync(API_URL, payload);
-            var result = await response.Content.ReadAsStringAsync();
+            var payload = new { inputs = prompt }; 
+            var response = await _httpClient.PostAsJsonAsync(API_URL, payload);
 
-            var deserializedData = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(result);
-
-            if (deserializedData == null || deserializedData.Count == 0 || !deserializedData[0].ContainsKey("generated_text"))
+            if (!response.IsSuccessStatusCode)
             {
-                return string.Empty; 
+                return $"API Error: {response.StatusCode} - {await response.Content.ReadAsStringAsync()}";
             }
 
-            return deserializedData[0]["generated_text"];
+            var result = await response.Content.ReadAsStringAsync();
+
+            try
+            {
+                var deserializedData = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(result);
+
+                if (deserializedData != null && deserializedData.Count > 0 && deserializedData[0].ContainsKey("generated_text"))
+                {
+                    var generatedText = deserializedData[0]["generated_text"];
+                    return generatedText.Replace(prompt, "").Trim();
+                }
+            }
+            catch (JsonException)
+            {
+                return $"Failed to parse API response: {result}";
+            }
+
+            return "No content generated.";
         }
     }
 }
