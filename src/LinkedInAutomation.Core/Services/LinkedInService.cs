@@ -27,7 +27,8 @@ namespace LinkedInAutomation.Core.Services
             _logger.LogInformation("🚀 Starting LinkedIn post automation...");
 
             var options = new ChromeOptions();
-            //options.AddArgument("--headless"); // Runs in headless mode (no UI)
+            options.AddArgument("--headless");
+            options.AddArgument("--disable-gpu");
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-dev-shm-usage");
 
