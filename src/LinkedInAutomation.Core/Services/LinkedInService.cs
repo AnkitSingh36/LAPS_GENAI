@@ -34,6 +34,7 @@ namespace LinkedInAutomation.Core.Services
                 options.AddArgument("--disable-dev-shm-usage");
                 options.AddArgument("--user-data-dir=/tmp/chrome-profile");
                 options.AddArgument("--incognito");
+                options.AddArgument("--log-level=ALL");
 
                 using (IWebDriver driver = new ChromeDriver(options))
                 {
