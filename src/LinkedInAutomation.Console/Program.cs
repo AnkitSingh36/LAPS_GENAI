@@ -71,7 +71,7 @@ namespace LinkedInAutomation.Console
                 }
                 else
                 {
-                    await telegram.SendMessage("Post cancelled.");
+                    await telegram.SendMessage("Post rejected.");
                 }
             }
             catch (Exception ex)
