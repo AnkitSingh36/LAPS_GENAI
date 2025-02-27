@@ -103,11 +103,11 @@ namespace LinkedInAutomation.Console
             return services.BuildServiceProvider();
         }
 
-        public static AppConfig LoadConfiguration()
-        {
-            string json = File.ReadAllText("appsettings.json");
-            return JsonSerializer.Deserialize<AppConfig>(json) ?? throw new InvalidOperationException("json not found.");
-        }
+        //public static AppConfig LoadConfiguration()
+        //{
+        //    string json = File.ReadAllText("appsettings.json");
+        //    return JsonSerializer.Deserialize<AppConfig>(json) ?? throw new InvalidOperationException("json not found.");
+        //}
 
     }
     
