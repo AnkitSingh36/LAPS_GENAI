@@ -28,16 +28,28 @@ namespace LinkedInAutomation.Core.Services
                 _logger.LogInformation("Starting LinkedIn post automation...");
 
                 var options = new ChromeOptions();
-                //options.AddArgument("--headless=new");
+                // Stealth Mode
                 options.AddExcludedArgument("enable-automation");
                 options.AddArgument("--disable-blink-features=AutomationControlled");
+
+                // User-Agent Spoofing
                 options.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36");
+
+                // Performance and Stability
                 options.AddArgument("--disable-gpu");
                 options.AddArgument("--no-sandbox");
                 options.AddArgument("--disable-dev-shm-usage");
-                options.AddArgument("--user-data-dir=/tmp/chrome-profile");
-                options.AddArgument("--incognito");
+
+                options.AddArgument("--profile-directory=Profile1");
+
+                // Logging
                 options.AddArgument("--log-level=ALL");
+
+                // Optional: Debugging (Avoid Session Issues)
+                options.AddArgument("--remote-debugging-port=9222");
+
+                // Optional: Headless Mode (Run Without UI)
+                options.AddArgument("--headless");
 
                 using (IWebDriver driver = new ChromeDriver(options))
                 {
