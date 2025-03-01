@@ -25,10 +25,13 @@ namespace LinkedInAutomation.Core.Services
         {
             return await Task.Run(() =>
             {
-                _logger.LogInformation("🚀 Starting LinkedIn post automation...");
+                _logger.LogInformation("Starting LinkedIn post automation...");
 
                 var options = new ChromeOptions();
-                options.AddArgument("--headless=new");
+                //options.AddArgument("--headless=new");
+                options.AddExcludedArgument("enable-automation");
+                options.AddArgument("--disable-blink-features=AutomationControlled");
+                options.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36");
                 options.AddArgument("--disable-gpu");
                 options.AddArgument("--no-sandbox");
                 options.AddArgument("--disable-dev-shm-usage");
@@ -40,6 +43,8 @@ namespace LinkedInAutomation.Core.Services
                 {
                     try
                     {
+                        var js = "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})";
+                        ((IJavaScriptExecutor)driver).ExecuteScript(js);
                         WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
 
                         _logger.LogInformation("Navigating to LinkedIn login page...");
