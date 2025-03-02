@@ -1,54 +1,54 @@
-name: Daily LinkedIn Post
+# name: Daily LinkedIn Post
 
-on:
-  schedule:
-    - cron: '30 15 * * *'  # Runs daily at 9 PM IST (3:30 PM UTC)
-  workflow_dispatch:     
+# on:
+#   schedule:
+#     - cron: '30 15 * * *'  # Runs daily at 9 PM IST (3:30 PM UTC)
+#   workflow_dispatch:     
 
-jobs:
-  generate-and-post:
-    runs-on: ubuntu-latest
+# jobs:
+#   generate-and-post:
+#     runs-on: ubuntu-latest
     
-    env:
-      HUGGINGFACE_API_TOKEN: ${{ secrets.HUGGINGFACE_API_TOKEN }}
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      LINKEDIN_USER_ID: ${{ secrets.LINKEDIN_USER_ID }}
-      LINKEDIN_USER_SECRET: ${{ secrets.LINKEDIN_USER_SECRET }}
+#     env:
+#       HUGGINGFACE_API_TOKEN: ${{ secrets.HUGGINGFACE_API_TOKEN }}
+#       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+#       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+#       LINKEDIN_USER_ID: ${{ secrets.LINKEDIN_USER_ID }}
+#       LINKEDIN_USER_SECRET: ${{ secrets.LINKEDIN_USER_SECRET }}
 
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+#     steps:
+#     - name: Checkout Repository
+#       uses: actions/checkout@v4
 
-    - name: Setup .NET 8.0
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0.x'
+#     - name: Setup .NET 8.0
+#       uses: actions/setup-dotnet@v3
+#       with:
+#         dotnet-version: '8.0.x'
 
-    - name: Restore Dependencies
-      run: dotnet restore
-      continue-on-error: false
+#     - name: Restore Dependencies
+#       run: dotnet restore
+#       continue-on-error: false
 
-    - name: Fix Selenium Manager Permissions
-      run: chmod +x src/LinkedInAutomation.Console/bin/Debug/net8.0/selenium-manager/linux/selenium-manager || echo "No selenium-manager found, skipping"
+#     - name: Fix Selenium Manager Permissions
+#       run: chmod +x src/LinkedInAutomation.Console/bin/Debug/net8.0/selenium-manager/linux/selenium-manager || echo "No selenium-manager found, skipping"
 
-    - name: Build Project
-      run: dotnet build --configuration Release --no-restore
-      continue-on-error: false
+#     - name: Build Project
+#       run: dotnet build --configuration Release --no-restore
+#       continue-on-error: false
 
-    - name: Run Unit Tests
-      run: dotnet test --configuration Release --no-build --verbosity normal
-      continue-on-error: false
+#     - name: Run Unit Tests
+#       run: dotnet test --configuration Release --no-build --verbosity normal
+#       continue-on-error: false
 
-    - name: Run LinkedIn Automation
-      run: dotnet run --project src/LinkedInAutomation.Console/LinkedInAutomation.Console.csproj
-      env:
-        DOTNET_ENVIRONMENT: Production
-      continue-on-error: false
+#     - name: Run LinkedIn Automation
+#       run: dotnet run --project src/LinkedInAutomation.Console/LinkedInAutomation.Console.csproj
+#       env:
+#         DOTNET_ENVIRONMENT: Production
+#       continue-on-error: false
 
-    - name: Send Telegram Alert on Failure
-      if: failure()
-      run: |
-        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-        -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-        -d text="LinkedIn automation failed! Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+#     - name: Send Telegram Alert on Failure
+#       if: failure()
+#       run: |
+#         curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+#         -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+#         -d text="LinkedIn automation failed! Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
